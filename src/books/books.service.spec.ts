@@ -36,9 +36,7 @@ describe('booksSevice', () => {
             writer: "jenny han",
             genre: "romance"
         };
-
-        const CreateBooks = { id: 1, ...books }
-
+        
         mockPrisma.books.create.mockResolvedValue(books)
 
         const result = await service.create(books)
